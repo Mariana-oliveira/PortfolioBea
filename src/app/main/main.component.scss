@@ -1,0 +1,42 @@
+.main {
+    height: 98vh;
+    background-image:  linear-gradient(to right, rgba(242, 207, 99, 0.4), rgba(242, 207, 99, 0.4)),url('../../assets/img/SUNFLOWERS.svg');
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+
+    padding-top: 2rem;
+
+    &-info {
+        width: 80vw;
+        margin: 0 auto;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 45% auto;
+        grid-template-rows: minmax(min-content,auto) minmax(min-content,auto);
+        grid-template-areas:    
+                                "intro area"
+                                "footer area";
+        grid-column-gap: 3rem;
+        width: 100%;
+        align-items: center;
+    }
+}
+
+app-intro{
+    grid-area: intro;
+    align-self: end;
+}
+
+app-footer {
+    grid-area: footer;
+    align-self: start;
+}
+
+app-areas {
+    grid-area: area;
+    align-self: start;
+}
+

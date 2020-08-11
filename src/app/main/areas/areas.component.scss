@@ -1,0 +1,28 @@
+.areas {
+    display: grid;
+    grid-template-columns: minmax(min-content, 0.5fr) 2fr;
+    grid-column-gap: 3rem;
+    grid-template-areas: "title areas";
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+        grid-area: title;
+        justify-self:center ;
+        font-family: "BodoniMT";
+        font-size: 6rem;
+        font-weight: 700;
+        color: black;
+        text-transform: uppercase;
+
+        transform: rotate(180deg);
+        writing-mode: vertical-rl;
+        text-orientation: sideways;
+    }
+
+    &__area {
+        grid-area: areas;
+    }
+
+}
