@@ -1,9 +1,9 @@
 .main {
-    height: 98vh;
-    background-image:  linear-gradient(to right, rgba(242, 207, 99, 0.4), rgba(242, 207, 99, 0.4)),url('~src/assets/img/SUNFLOWERS.svg');
+    min-height: 98vh;
+    background:  linear-gradient(to right, rgba(242, 207, 99, 0.4), rgba(242, 207, 99, 0.4)),url('~src/assets/img/SUNFLOWERS.svg') no-repeat center center fixed;
     background-size: cover;
-    object-fit: cover;
-    background-position: center;
+    overflow: hidden;
+
 
     padding-top: 2rem;
 
@@ -15,14 +15,18 @@
     &__content {
         display: grid;
         grid-template-columns: 45% auto;
-        grid-template-rows: minmax(min-content,auto) minmax(min-content,auto);
-        grid-template-areas:    
+        grid-template-rows: minmax(min-content,auto) minmax(min-content,auto) minmax(min-content,auto);
+        grid-template-areas:    "header header"
                                 "intro area"
                                 "footer area";
         grid-column-gap: 3rem;
         width: 100%;
         align-items: center;
     }
+}
+
+app-header {
+    grid-area: header;
 }
 
 app-intro{
